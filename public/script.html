@@ -1,0 +1,73 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#050505">
+<title>script &middot; VORTEX HUB</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2016%2016'%3E%3Crect%20width='16'%20height='16'%20fill='%23050505'/%3E%3Cpath%20d='M4%205l3%203-3%203M8%2011h4'%20stroke='%2300ff9c'%20stroke-width='1.5'%20fill='none'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<div class="scan" aria-hidden="true"></div>
+<header>
+  <a class="brand" href="/">vortex_hub<span class="cursor">&#9614;</span></a>
+  <nav>
+    <a href="/">scripts</a>
+    <a href="/upload">+ upload</a>
+  </nav>
+</header>
+
+<main class="viewer">
+  <a class="back" href="/">&larr; back to archive</a>
+
+  <div id="err" class="empty hidden">script not found. <a href="/">browse the archive</a></div>
+
+  <section id="content" class="hidden">
+    <section class="meta">
+      <h1 id="title"></h1>
+      <div class="metagrid">
+        <div><label>script id</label><code id="sid"></code></div>
+        <div><label>game</label><span id="game"></span></div>
+        <div><label>executions</label><span id="views"></span></div>
+        <div><label>size</label><span id="size"></span></div>
+        <div><label>uploaded</label><span id="date"></span></div>
+      </div>
+      <p id="desc" class="desc"></p>
+    </section>
+
+    <section class="loadbox">
+      <label>one-line loader &mdash; paste into vortex</label>
+      <pre id="loadstr"></pre>
+      <button id="btnLs">copy loadstring</button>
+    </section>
+
+    <section class="rawbox">
+      <label>source &mdash; <a id="rawlink" target="_blank" rel="noopener"></a></label>
+      <pre id="code"></pre>
+      <div class="btnrow">
+        <button id="btnCode">copy source</button>
+        <a id="btnDl" class="btn" download="">download .lua</a>
+      </div>
+    </section>
+
+    <details class="danger">
+      <summary>delete this script</summary>
+      <div class="warnbox">
+        <p>paste the <b>delete key</b> you got after uploading. shown once, keep it safe.</p>
+        <input id="delkey" type="text" placeholder="delete key" autocomplete="off" spellcheck="false">
+        <button id="btnDel" class="dangerbtn">delete permanently</button>
+        <span id="delmsg"></span>
+      </div>
+    </details>
+  </section>
+</main>
+
+<footer>
+  <span>not affiliated with playvortex.io</span>
+  <span>luau in &middot; chaos out</span>
+</footer>
+
+<script src="/js/script.js"></script>
+</body>
+</html>

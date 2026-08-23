@@ -1,0 +1,47 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#050505">
+<title>VORTEX HUB — luau script archive</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2016%2016'%3E%3Crect%20width='16'%20height='16'%20fill='%23050505'/%3E%3Cpath%20d='M4%205l3%203-3%203M8%2011h4'%20stroke='%2300ff9c'%20stroke-width='1.5'%20fill='none'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<div class="scan" aria-hidden="true"></div>
+<header>
+  <a class="brand" href="/">vortex_hub<span class="cursor">&#9614;</span></a>
+  <nav>
+    <a href="/" class="on">scripts</a>
+    <a href="/upload">+ upload</a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>SCRIPT ARCHIVE<span class="dim">_</span></h1>
+    <p class="sub">community luau scripts for <b>vortex</b> &middot; grab &middot; execute &middot; go</p>
+    <div class="searchwrap">
+      <span class="prompt">&gt;</span>
+      <input id="search" type="text" placeholder="search title / game / description&hellip;" autocomplete="off" spellcheck="false">
+    </div>
+  </section>
+
+  <section class="stats">
+    <div><span id="stScripts">&mdash;</span> scripts</div>
+    <div><span id="stViews">&mdash;</span> executions</div>
+  </section>
+
+  <section id="list" class="list"></section>
+  <div id="empty" class="empty hidden">no scripts match. <a href="/upload">be the first to ship one.</a></div>
+</main>
+
+<footer>
+  <span>not affiliated with playvortex.io</span>
+  <span>luau in &middot; chaos out</span>
+</footer>
+
+<script src="/js/main.js"></script>
+</body>
+</html>

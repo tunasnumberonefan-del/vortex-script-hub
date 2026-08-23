@@ -1,0 +1,55 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#050505">
+<title>upload &middot; VORTEX HUB</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2016%2016'%3E%3Crect%20width='16'%20height='16'%20fill='%23050505'/%3E%3Cpath%20d='M4%205l3%203-3%203M8%2011h4'%20stroke='%2300ff9c'%20stroke-width='1.5'%20fill='none'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<div class="scan" aria-hidden="true"></div>
+<header>
+  <a class="brand" href="/">vortex_hub<span class="cursor">&#9614;</span></a>
+  <nav>
+    <a href="/">scripts</a>
+    <a href="/upload" class="on">+ upload</a>
+  </nav>
+</header>
+
+<main class="uploader">
+  <h1>UPLOAD SCRIPT<span class="dim">_</span></h1>
+  <p class="sub">drop your luau. you get a raw endpoint + a one-line loader.</p>
+
+  <form id="form">
+    <label>title <span class="req">*</span>
+      <input name="title" maxlength="120" required placeholder="aimbot v2.1" autocomplete="off" spellcheck="false">
+    </label>
+    <label>game <span class="opt">(optional)</span>
+      <input name="game" maxlength="80" placeholder="universal / blade ball / fisch" autocomplete="off" spellcheck="false">
+    </label>
+    <label>description <span class="opt">(optional)</span>
+      <textarea name="description" rows="3" maxlength="2000" placeholder="what it does, controls, credits&hellip;" spellcheck="false"></textarea>
+    </label>
+    <label>luau code <span class="req">*</span>
+      <div class="filebar">
+        <input type="file" id="file" accept=".lua,.luau,.txt">
+        <span class="hint">.lua/.luau/.txt &mdash; or paste below</span>
+      </div>
+      <textarea name="code" rows="14" required placeholder="-- your script here&#10;loadstring(game:HttpGet(&quot;...&quot;))()" spellcheck="false"></textarea>
+    </label>
+    <button type="submit" id="submitBtn" class="primary">ship it &#9656;</button>
+  </form>
+
+  <section id="result" class="hidden"></section>
+</main>
+
+<footer>
+  <span>not affiliated with playvortex.io</span>
+  <span>luau in &middot; chaos out</span>
+</footer>
+
+<script src="/js/upload.js"></script>
+</body>
+</html>
