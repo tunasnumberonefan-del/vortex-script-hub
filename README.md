@@ -1,4 +1,4 @@
-﻿# vortex-script-hub
+# vortex-script-hub
 
 Minimalist, stylized luau **script archive** for **Vortex** (`playvortex.io`). Users upload scripts, get a clean raw endpoint, and a one-line loader:
 

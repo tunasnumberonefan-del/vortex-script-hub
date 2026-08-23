@@ -1,4 +1,4 @@
-﻿const $ = (s, r = document) => r.querySelector(s);
+const $ = (s, r = document) => r.querySelector(s);
 const esc = (t) =>
   String(t == null ? '' : t).replace(/[&<>"']/g, (c) =>
     ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c])
